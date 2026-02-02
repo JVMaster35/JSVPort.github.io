@@ -2,169 +2,247 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Jack S Veasey">
-
   <title>Jack Veasey - Portfolio</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="css/scrolling-nav.css" rel="stylesheet">
-
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body id="page-top">
+<body class="pt-5" id="page-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">J.S.V</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.html#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.html#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.html#works">Works</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="CV.html">CV</a>
-            </li>
-          </ul>
+<!-- ================= NAVIGATION ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html#page-top">J.S.V</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#works">Works</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="CV.html">CV</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HEADER ================= -->
+<header class="bg-primary text-white text-center py-5">
+  <div class="container">
+    <h1 class="fw-bold">Armada Studio: Tails Adventure Armada</h1>
+
+    <!-- Responsive YouTube Embed -->
+    <div class="ratio ratio-16x9 my-4">
+      <iframe src="https://www.youtube.com/embed/JbifJ0rAhyY"
+              title="Tails Adventure Armada Gameplay"
+              allowfullscreen>
+      </iframe>
+    </div>
+
+    <p class="lead">
+      A free-to-play fan game inspired by the classic Sega platformer,
+      reimagined with modern mechanics and 3D gameplay.
+    </p>
+  </div>
+</header>
+
+<!-- ================= PROJECT DETAILS ================= -->
+<section id="project-details" class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <h2 class="mb-4">Project Details</h2>
+
+        <div class="row">
+          <div class="col-md-6">
+            <strong>Platform:</strong>
+            <ul>
+              <li>Windows</li>
+              <li>Consoles</li>
+            </ul>
+
+            <strong>Engine / Language:</strong>
+            <ul>
+              <li>Unity (C#) [Formerly]</li>
+              <li>Unreal Engine [Currently]</li>
+            </ul>
+          </div>
+
+          <div class="col-md-6">
+            <strong>Studio:</strong>
+            <ul>
+              <li>Armada Studios</li>
+            </ul>
+
+            <strong>Genre:</strong>
+            <ul>
+              <li>3D Platformer</li>
+              <li>Action-Adventure</li>
+              <li>Free-to-Play</li>
+            </ul>
+          </div>
         </div>
+
       </div>
-    </nav>
-
-  <header class="bg-primary text-white"  style="background-color: #480264 !important;">
-    <div class="container text-center">
-      <h1>Armada Studio: Tails Adventure Armada</h1>
-        <iframe width="100%" height="498em" src="https://www.youtube.com/embed/JbifJ0rAhyY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <p class="lead">A Free-to-Play, fan-game based on the classic Sega platform game with a modern twist.</p>
     </div>
-  </header>
+  </div>
+</section>
 
-  <section id="Project Details">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Project Details</h2>
-          <p class="lead">Platform</p>
-          <ul>
-            <li>Windows</li>
-            <li>Consoles</li>
-          </ul>
-          <p class="lead">Engine/Language</p>
-          <ul>
-            <li>Unity(C#)</li>
-          </ul>
-          <p class="lead">Project</p>
-          <ul>
-            <li>Armada Studios</li>
-            <li>3d, free-to-play, platform, action-adventure</li>
-          </ul>
+<!-- ================= ABOUT PROJECT ================= -->
+<section id="project-description" class="bg-light py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <h2 class="mb-4">About the Project</h2>
+
+        <p>
+          As a part-time programmer for Armada Studios, I contributed to the
+          development of a modern fan sequel to Sega’s 1995 game
+          <em>Tails Adventure</em>, titled <strong>Tails Adventure Armada</strong>.
+        </p>
+
+        <p>
+          Staying true to the original, the project is a 3D platformer featuring
+          gadget-based traversal, combat systems, and free-roaming exploration.
+          Players utilise various tools to overcome obstacles, defeat enemies,
+          and access new areas, while leveraging Tails’ signature flying ability
+          for vertical traversal and strategic movement.
+        </p>
+
+        <p>
+          My responsibilities included implementing gameplay systems in C#,
+          including:
+        </p>
+
+        <ul>
+          <li>Player movement and jumping mechanics</li>
+          <li>Flight system implementation</li>
+          <li>Animation synchronisation</li>
+          <li>Enemy detection and combat interactions</li>
+        </ul>
+
+        <p>
+          The project remains in active development, and I continue contributing
+          to its core gameplay systems.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= IMAGES ================= -->
+<section id="project-images" class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <h2 class="mb-4">Screenshots</h2>
+
+        <div id="carouselSlides" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner rounded shadow">
+
+            <div class="carousel-item active">
+              <img src="images/TAA/Screenshot (1).png"
+                   class="d-block w-100 img-fluid"
+                   alt="Gameplay screenshot showing character"
+                   loading="lazy">
+            </div>
+
+            <div class="carousel-item">
+              <img src="images/TAA/Screenshot (2).png"
+                   class="d-block w-100 img-fluid"
+                   alt="Gameplay footage of playable character"
+                   loading="lazy">
+            </div>
+
+            <div class="carousel-item">
+              <img src="images/TAA/Screenshot (3).png"
+                   class="d-block w-100 img-fluid"
+                   alt="Code snippet of alternative Character Controller script"
+                   loading="lazy">
+            </div>
+
+            <div class="carousel-item">
+              <img src="images/TAA/Screenshot (4).png"
+                   class="d-block w-100 img-fluid"
+                   alt="Flight mechanic code snippet"
+                   loading="lazy">
+            </div>
+
+            <div class="carousel-item">
+              <img src="images/TAA/Screenshot (5).png"
+                   class="d-block w-100 img-fluid"
+                   alt="Unity animator for playable character"
+                   loading="lazy">
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" type="button"
+                  data-bs-target="#carouselSlides"
+                  data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" type="button"
+                  data-bs-target="#carouselSlides"
+                  data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
+
       </div>
     </div>
-    <hr>
-  </section>
+  </div>
+</section>
 
-  <section id="Project Description">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>About Project</h2>
-          <p class="lead">As a part-time programmer for Armada Studios, I contributed to the development of their modern, fan-sequel to Sega's 1995 Tails Adventure game, dubbed Tails Adventure Armada, where the iconic hero once again does battle with the sinister Battle Bird Armada.</p>
-          <p class="lead">Following the tradition that the original, Tails Adventure Armada is a platform game, with 3d modelling and controls, akin to a free-roaming game. In keeping with the elements of its original counterpart,
-          the game will involve utilizing various gadgets to remove obstacles, battle enemies, and access new areas, while also playing to the title-character's ability to fly to traverse terrian, ascend platforms and avoid any unwanted attention.</p>
-          <p class="lead">As one of the developers, I am charged with helping bringing the game to life utilizing C# coding and 3d art models made by the  artists.
-            Part of my involvment included some of the game controller components for Tails, including movement, jumping, flying, animation synchronization, and enemy detection and combat.</p> 
-          <p class="lead">The project itself is still in the development stage, but I'm hoping that my contributions to its development will help it stand out amongst Sonic fan-games.</p>
-      </div>
-    </div>
-    <hr>
-  </section>
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="bg-light py-5">
+  <div class="container text-center">
+    <h2>Contact</h2>
+    <p class="lead">
+      If you would like to discuss the project or future opportunities,
+      feel free to get in touch.
+    </p>
+    <p>
+      Email:
+      <a href="mailto:jackveasey23@live.co.uk">
+        jackveasey23@live.co.uk
+      </a>
+      <br>
+      Mobile: 07960 211 813
+    </p>
+  </div>
+</section>
 
-  <section id="Project Images" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-            <h2>Images</h2>
-            <div id="carouselSlides" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="images/TAA/Screenshot (1).png" alt="Screenshot 1" style="width:100%; height:100%">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="images/TAA/Screenshot (2).png" alt="Screenshot 2" style="width:100%; height:100%">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="images/TAA/Screenshot (3).png" alt="Screenshot 3" style="width:100%; height:100%">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="images/TAA/Screenshot (4).png" alt="Screenshot 4" style="width:100%; height:100%">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="images/TAA/Screenshot (5).png" alt="Screenshot 5" style="width:100%; height:100%">
-                      </div>
-                  </div>
-            <a class="carousel-control-prev" href="#carouselSlides" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselSlides" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-        </div>
-      </div>
-    </div>
-    <hr>
-  </section>
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    © 2026 Jack Veasey
+  </div>
+</footer>
 
-  <section id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Contact us</h2>
-          <p class="lead">If this is all or not to much, use these to stay in touch.</p>
-          <ul>
-            <li>Email: <a href ="jackveasey23@live.co.uk">jackveasey23@live.co.uk</a></li>
-            <li>Mobile: 07960 211 813</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; JSV Portfolio - 2022</p>
-    </div>
-    <!-- /.container -->
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom JavaScript for this theme -->
-  <script src="js/scrolling-nav.js"></script>
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
