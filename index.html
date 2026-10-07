@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Jack S Veasey">
 
-  <title>Jack S Veasey [Video Game Programmer] - Portfolio</title>
+  <title>Jack S Veasey | Gameplay &amp; Systems Programmer</title>
+  <meta name="description" content="Portfolio of Jack S Veasey, a gameplay and systems programmer working in Unity and Unreal Engine, with 7+ years of professional software development.">
 
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,25 +23,76 @@
       margin-bottom: 0.5rem;
     }
 
-    .carousel-inner ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 auto 1rem;
+    /* ---------- Works grid ---------- */
+    .works-heading {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #480264;
+      border-bottom: 2px solid #480264;
+      padding-bottom: 0.4rem;
+      margin: 2.5rem 0 1.25rem;
     }
 
-    .carousel-inner ul li {
-      padding: 0.2rem 0;
+    .work-card {
+      border: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    figure {
-      margin: 0;
-      text-align: center;
+    .work-card:hover,
+    .work-card:focus-within {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(72,2,100,0.18);
     }
 
-    figcaption {
-      margin-top: 0.5rem;
-      font-style: italic;
+    .work-card .ratio img {
+      object-fit: cover;
+      background-color: #212529;
+    }
+
+    .work-card .ratio img.contain {
+      object-fit: contain;
+    }
+
+    .work-role {
+      font-size: 0.85rem;
+      color: #6c757d;
+      margin-bottom: 0.5rem;
+    }
+
+    .work-tags .badge {
+      font-weight: 500;
+      margin: 0 0.25rem 0.25rem 0;
+    }
+
+    .badge-engine {
+      background-color: #480264;
+    }
+
+    .course-list a {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ---------- Skills ---------- */
+    .skill-group h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #c9a3e0;
+      margin-bottom: 0.75rem;
+    }
+
+    .skill-group .badge {
       font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.5em 0.8em;
+      margin: 0 0.35rem 0.5rem 0;
+      background-color: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
     }
 
     .portrait {
@@ -68,7 +120,7 @@
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#works">Works</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="CV.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="html/CV.html">CV</a></li>
         </ul>
       </div>
     </div>
@@ -77,111 +129,145 @@
   <!-- ================= HEADER ================= -->
   <header class="text-white text-center py-5">
     <div class="container">
-      <img src="images/My portrait.jpg" width="200" height="300" alt="Portrait photo" class="portrait">
-      <h1>Welcome One and All!</h1>
-      <p class="lead">You are on the portfolio of Jack S Veasey, a Video Games Programmer with specailties in Gameplay, Systems and more, all written in clean and efficent code.</p>
-      <p class="lead">Here you will find an in-depth look at me, the games I created in my own time, and the skills developed to make them.</p>
+      <img src="images/My portrait.jpg" width="200" height="300" alt="Portrait of Jack S Veasey" class="portrait">
+      <h1 class="mt-3 mb-1">Jack S Veasey</h1>
+      <p class="fs-4 mb-3">Gameplay &amp; Systems Programmer</p>
+      <p class="lead mx-auto" style="max-width: 46rem;">Computer Games Development graduate (BSc, 2:1) and professional software developer since 2019. I build gameplay systems in Unity and Unreal Engine: player movement, AI, multiplayer and the tools that hold them together.</p>
+      <div class="d-flex gap-2 justify-content-center flex-wrap mt-4">
+        <a href="#works" class="btn btn-light">See my work</a>
+        <a href="CV.html" class="btn btn-outline-light">Download CV</a>
+      </div>
     </div>
   </header>
 
     <!-- ================= WORKS ================= -->
   <section id="works" class="py-5 bg-light">
     <div class="container">
-      <h2 class="text-center mb-4">Works</h2>
-      <p class="lead text-center mb-4">Here you'll find projects I've worked on during my personal time.</p>
+      <h2 class="text-center mb-3">Works</h2>
+      <p class="lead text-center mb-0">Studio, game jam, university and personal projects &mdash; original work first.</p>
 
-      <div id="worksCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <!-- Repeat this block for each project -->
-          <div class="carousel-item active">
-            <figure>
-              <a href="udemy_SHUMP.html">
-                <img src="images/UDEMY/SHMUP/Screenshot 2026-02-26 180331.png" class="d-block w-100" alt="SHMUP Game">
-              </a>
-              <figcaption>Create Stunning Vertical Shoot 'Em Up for Mobile with Unity</figcaption>
-            </figure>
-          </div>
-          <div class="carousel-item">
-            <figure>
-              <a href="udemy_cityBuilder.html">
-                <img src="images/UDEMY/COURSE5/Screenshot (71).png" class="d-block w-100" alt="City Builder">
-              </a>
-              <figcaption>Learn to Program & Model Procedural Cities in Unity/Blender</figcaption>
-            </figure>
-          </div>
-
-          <div class="carousel-item">
-            <figure>
-              <a href="udemy_TB_strategy.html">
-                <img src="images/UDEMY/COURSE3/Screenshot (42).png" class="d-block w-100" alt="Turn-Based Strategy">
-              </a>
-              <figcaption>Unity Turn-Based Strategy Game: Intermediate C# Coding</figcaption>
-            </figure>
-          </div>
-
-          <div class="carousel-item">
-            <figure>
-              <a href="udemy_tower_defence.html">
-                <img src="images/UDEMY/COURSE2/Screenshot (31).png" class="d-block w-100" alt="Tower Defence">
-              </a>
-              <figcaption>Learn To Create a Tower Defence Game With Unity & C#</figcaption>
-            </figure>
-          </div>
-
-          <div class="carousel-item">
-            <figure>
-              <a href="udemy_metroidvania.html">
-                <img src="images/UDEMY/COURSE4/Screenshot (49).png" class="d-block w-100" alt="Metroidvania">
-              </a>
-              <figcaption>Learn to Create a Metroidvania Game using Unity & C#</figcaption>
-            </figure>
-          </div>
-
-          <div class="carousel-item">
-            <figure>
-              <a href="ur_horror.html">
-                <img src="images/UDEMY/COURSE6/Screenshot (83).png" class="d-block w-100" alt="Survival Horror">
-              </a>
-              <figcaption>Ultimate Survival Horror Course</figcaption>
-            </figure>
-          </div>
-
-          <div class="carousel-item">
-            <figure>
-              <a href="group_project.html">
-                <img src="images/GP/Screenshot (25).png" class="d-block w-100" alt="Group Project">
-              </a>
-              <figcaption>University Group Project: Toy Breakers</figcaption>
-            </figure>
-          </div>
-
-          <div class="carousel-item">
-            <figure>
-              <a href="metroidvania29.html">
-                <img src="images/JAMS/MVM29/Screenshot (94).png" class="d-block w-100" alt="GearShift">
-              </a>
-              <figcaption>Game Jam: Metroidvania Month 29</figcaption>
-            </figure>
-          </div>
-
-          <div class="carousel-item">
-            <figure>
-              <a href="gmtk_lightsout.html">
-                <img src="images/JAMS/GMTK2026/lightsout_cover.png" class="d-block w-100" alt="GearShift">
-              </a>
-              <figcaption>Game Jam: GMTK Game Jam 2026</figcaption>
-            </figure>
-          </div>
-          <!-- Add remaining projects similarly -->
+      <h3 class="works-heading">Featured Projects</h3>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <article class="card work-card h-100">
+            <div class="ratio ratio-16x9">
+              <img src="images/TAA/Screenshot (1).png" class="card-img-top" alt="Tails Adventure Armada gameplay" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title mb-1"><a href="html/TAA.html" class="stretched-link text-decoration-none text-dark">Tails Adventure Armada</a></h3>
+              <p class="work-role">Gameplay Programmer &middot; Armada Studios (team, ongoing)</p>
+              <div class="work-tags"><span class="badge badge-engine">Unity &rarr; Unreal</span><span class="badge text-bg-light border">3D Platformer</span><span class="badge text-bg-light border">Flight System</span><span class="badge text-bg-light border">Player Movement</span></div>
+            </div>
+          </article>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#worksCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#worksCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="col-md-6 col-lg-4">
+          <article class="card work-card h-100">
+            <div class="ratio ratio-16x9">
+              <img src="images/JAMS/GMTK2026/lightsout_cover.png" class="card-img-top" alt="Lights Out cover art" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title mb-1"><a href="html/gmtk_lightsout.html" class="stretched-link text-decoration-none text-dark">Lights Out</a></h3>
+              <p class="work-role">Solo Developer &middot; GMTK Game Jam 2026 (4 days)</p>
+              <div class="work-tags"><span class="badge badge-engine">Unity</span><span class="badge text-bg-light border">Strategy Sim</span><span class="badge text-bg-light border">Resource Management</span><span class="badge text-bg-light border">Countdown Systems</span></div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="card work-card h-100">
+            <div class="ratio ratio-16x9">
+              <img src="images/JAMS/MVM29/Screenshot (94).png" class="card-img-top" alt="GearShift gameplay" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title mb-1"><a href="html/metroidvania29.html" class="stretched-link text-decoration-none text-dark">GearShift</a></h3>
+              <p class="work-role">Sole Programmer &middot; Metroidvania Month 29 (team of 2)</p>
+              <div class="work-tags"><span class="badge badge-engine">Unity</span><span class="badge text-bg-light border">2D Metroidvania</span><span class="badge text-bg-light border">Form Switching</span><span class="badge text-bg-light border">Traversal Abilities</span></div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="card work-card h-100">
+            <div class="ratio ratio-16x9">
+              <img src="images/GP/Screenshot (25).png" class="card-img-top" alt="Toy Breakers gameplay" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title mb-1"><a href="html/group_project.html" class="stretched-link text-decoration-none text-dark">Toy Breakers</a></h3>
+              <p class="work-role">Programmer &middot; University Group Project (team of 5)</p>
+              <div class="work-tags"><span class="badge badge-engine">Unity</span><span class="badge text-bg-light border">4-Player Multiplayer</span><span class="badge text-bg-light border">Vehicle Combat</span><span class="badge text-bg-light border">Power-Ups</span></div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="card work-card h-100">
+            <div class="ratio ratio-16x9">
+              <img src="images/DISS/Screenshot (34).png" class="card-img-top" alt="Platformer dissertation gameplay" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title mb-1"><a href="html/uni_dissertation.html" class="stretched-link text-decoration-none text-dark">Platformer Dissertation</a></h3>
+              <p class="work-role">Solo Developer &middot; Final-Year Dissertation</p>
+              <div class="work-tags"><span class="badge badge-engine">Unity</span><span class="badge text-bg-light border">2D / 2.5D / 3D</span><span class="badge text-bg-light border">Camera Systems</span><span class="badge text-bg-light border">Player Research</span></div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="card work-card h-100">
+            <div class="ratio ratio-16x9">
+              <img src="images/UDEMY/udemyLogo.png" class="card-img-top contain bg-white p-4" alt="Udemy logo" loading="lazy">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h3 class="h5 card-title mb-1">Courses &amp; Training</h3>
+              <p class="work-role">6 certified Udemy courses &middot; 90+ hours</p>
+              <ul class="course-list small ps-3 mb-3">
+                <li><a href="html/udemy_SHUMP.html">Vertical Shoot 'Em Up (Unity)</a></li>
+                <li><a href="html/udemy_tower_defence.html">Tower Defence (Unity)</a></li>
+                <li><a href="html/udemy_TB_strategy.html">Turn-Based Strategy (Unity)</a></li>
+                <li><a href="html/udemy_metroidvania.html">Metroidvania (Unity)</a></li>
+                <li><a href="html/udemy_cityBuilder.html">Procedural Cities (Unity &amp; Blender)</a></li>
+                <li><a href="html/ur_horror.html">Survival Horror (Unreal Engine 5)</a></li>
+              </ul>
+              <a href="html/udemy_projects.html" class="btn btn-sm btn-outline-dark mt-auto align-self-start">View all courses</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <h3 class="works-heading">University Modules</h3>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <article class="card work-card h-100">
+            <div class="ratio ratio-16x9">
+              <img src="images/UN - Y3/Screenshot (1).png" class="card-img-top" alt="Crash Drive 2 project screenshot" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title mb-1"><a href="html/unity_work_1.html" class="stretched-link text-decoration-none text-dark">Crash Drive 2</a></h3>
+              <p class="work-role">Solo &middot; 3rd-Year Module</p>
+              <div class="work-tags"><span class="badge badge-engine">Unity</span><span class="badge text-bg-light border">Networking</span><span class="badge text-bg-light border">Lobby System</span></div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="card work-card h-100">
+            <div class="ratio ratio-16x9">
+              <img src="images/UREN - Y3/img-1.png" class="card-img-top" alt="RTS Multiplayer project screenshot" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title mb-1"><a href="html/uren_work_1.html" class="stretched-link text-decoration-none text-dark">RTS Multiplayer</a></h3>
+              <p class="work-role">Solo &middot; 3rd-Year Module</p>
+              <div class="work-tags"><span class="badge badge-engine">Unreal (Blueprints)</span><span class="badge text-bg-light border">Multiplayer</span><span class="badge text-bg-light border">RTS Camera</span></div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="card work-card h-100">
+            <div class="ratio ratio-16x9">
+              <img src="images/UN - Y2/Screenshot (11).png" class="card-img-top" alt="Downhill Bike project screenshot" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title mb-1"><a href="html/unity_work_2.html" class="stretched-link text-decoration-none text-dark">Downhill Bike</a></h3>
+              <p class="work-role">Solo &middot; 2nd-Year Module</p>
+              <div class="work-tags"><span class="badge badge-engine">Unity</span><span class="badge text-bg-light border">Physics</span><span class="badge text-bg-light border">Checkpoints</span></div>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -189,13 +275,14 @@
     <!-- ================= ABOUT ================= -->
   <section id="about" class="py-5">
     <div class="container">
-      <h2 class="text-center mb-4">Who Am I?</h2>
+      <h2 class="text-center mb-4">About Me</h2>
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <p class="lead">Who is Jack S Veasey and what does his portfolio entail?</p>
-          <p>I am a Game Design graduate (2.1) with a professional background in full-time IT systems and technical support. This unique combination allows me to approach game design with a "mechanics-first" mindset—bridging the gap between creative vision and technical implementation.
-            While my degree provided a deep foundation in Technical Design and , my IT career has sharpened my ability to debug complex systems, optimize workflows, and document technical processes with precision. I am looking to apply this dual-threat skillset to a Junior Technical Design role where logic, stability, and player experience meet.
-          </p>
+          <p class="lead">A games programmer with seven years of production software experience behind him.</p>
+          <p>I studied Computer Games Development at the University of Northampton, graduating with a 2:1. Since 2019 I've worked as a Software Developer &amp; DevOps engineer at a data-management consultancy serving financial-market clients, building and maintaining Java web applications hosted on AWS.</p>
+          <p>That job is where I learned to work on large, long-lived codebases: tracking down concurrency bugs and database connection leaks, removing performance bottlenecks, writing SQL reporting, and helping rebuild a legacy JSP platform in Spring Boot and React. The same habits &mdash; profile it, understand it, fix the root cause &mdash; carry straight into game code.</p>
+          <p>Outside work I make games: gameplay programming on the fan project <a href="TAA.html">Tails Adventure Armada</a>, solo and small-team game jams, and structured courses in Unity and Unreal Engine 5. I'm drawn to story-driven games with rich worlds, and away from the keyboard I'm usually drawing, writing stories or playing chess.</p>
+          <p class="mb-0">I'm looking for a <strong>junior gameplay or systems programmer</strong> role where I can bring that engineering discipline to a games team.</p>
         </div>
       </div>
     </div>
@@ -205,95 +292,37 @@
   <section id="skills" class="py-5 bg-dark text-white">
     <div class="container">
       <h2 class="text-center mb-4">What Are My Skills?</h2>
-      <p class="lead text-center mb-4">During my academic years and work experience, I developed numerous skills to advance my career in games programming.</p>
+      <p class="lead text-center mb-5">Game systems built across university, jams and courses, backed by 7+ years of professional software development.</p>
 
-      <div id="skillsCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner text-center">
-          <div class="carousel-item active">
-            <p class="sub-head">Languages:</p>
-            <ul>
-              <li>Java</li>
-              <li>Python</li>
-              <li>ActionScript3</li>
-              <li>C/C++</li>
-              <li>C#</li>
-              <li>JavaScript</li>
-              <li>PHP</li>
-              <li>SQL</li>
-              <li>Git</li>
-            </ul>
-          </div>
-          <div class="carousel-item">
-            <p class="sub-head">Web Technologies:</p>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>jQuery</li>
-            </ul>
-          </div>
-          <div class="carousel-item">
-            <p class="sub-head">Web/Application Servers:</p>
-            <ul>
-              <li>Apache Tomcat</li>
-            </ul>
-          </div>
-          <div class="carousel-item">
-            <p class="sub-head">IDEs:</p>
-            <ul>
-              <li>Eclipse</li>
-              <li>Android Studio</li>
-              <li>Visual Studio</li>
-              <li>MonoDevelop</li>
-              <li>IntelliJ</li>
-              <li>Xcode</li>
-            </ul>
-          </div>
-          <div class="carousel-item">
-            <p class="sub-head">Development Platforms:</p>
-            <ul>
-              <li>Unity</li>
-              <li>Unreal Engine</li>
-            </ul>
-          </div>
-          <div class="carousel-item">
-            <p class="sub-head">3D Computer Graphics:</p>
-            <ul>
-              <li>Blender</li>
-            </ul>
-          </div>
-          <div class="carousel-item">
-            <p class="sub-head">Development Frameworks:</p>
-            <ul>
-              <li>Angular</li>
-              <li>React</li>
-            </ul>
-          </div>
-          <div class="carousel-item">
-            <p class="sub-head">3Cloud-Computing Services:</p>
-            <ul>
-              <li>Amazon Web Services (AWS)</li>
-            </ul>
-          </div>
-          <div class="carousel-item">
-            <p class="sub-head">Operating Systems:</p>
-            <ul>
-              <li>Mac OS</li>
-              <li>Windows 10</li>
-              <li>Windows 11</li>
-              <li>Android</li>
-              <li>iOS</li>
-            </ul>
-          </div>
+      <div class="row g-4">
+        <div class="col-12 skill-group">
+          <h3>Game Systems</h3>
+          <div><span class="badge">Player Movement &amp; Controls</span><span class="badge">Enemy AI (Behaviour Trees)</span><span class="badge">Multiplayer &amp; Networking</span><span class="badge">Grid Pathfinding</span><span class="badge">Procedural Generation</span><span class="badge">Save / Load Systems</span><span class="badge">Camera Systems</span><span class="badge">UI &amp; Menus</span><span class="badge">Inventory &amp; Interaction</span></div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#skillsCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#skillsCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="col-md-6 col-lg-4 skill-group">
+          <h3>Game Engines</h3>
+          <div><span class="badge">Unity (C#)</span><span class="badge">Unreal Engine 5 (Blueprints)</span></div>
+        </div>
+        <div class="col-md-6 col-lg-4 skill-group">
+          <h3>Languages</h3>
+          <div><span class="badge">C#</span><span class="badge">C/C++</span><span class="badge">Java</span><span class="badge">Python</span><span class="badge">JavaScript</span><span class="badge">SQL</span><span class="badge">PHP</span></div>
+        </div>
+        <div class="col-md-6 col-lg-4 skill-group">
+          <h3>Tools</h3>
+          <div><span class="badge">Git</span><span class="badge">Visual Studio</span><span class="badge">IntelliJ</span><span class="badge">Eclipse</span><span class="badge">Blender</span><span class="badge">ProBuilder</span></div>
+        </div>
+        <div class="col-md-6 col-lg-4 skill-group">
+          <h3>Software &amp; Web</h3>
+          <div><span class="badge">Spring Boot</span><span class="badge">React</span><span class="badge">Angular</span><span class="badge">HTML / CSS</span><span class="badge">Apache Tomcat</span><span class="badge">MySQL</span></div>
+        </div>
+        <div class="col-md-6 col-lg-4 skill-group">
+          <h3>Cloud &amp; DevOps</h3>
+          <div><span class="badge">Amazon Web Services (AWS)</span><span class="badge">Cloudflare</span></div>
+        </div>
+        <div class="col-md-6 col-lg-4 skill-group">
+          <h3>Platforms</h3>
+          <div><span class="badge">Windows</span><span class="badge">macOS</span><span class="badge">Android</span><span class="badge">iOS</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -311,7 +340,7 @@
   <!-- ================= FOOTER ================= -->
   <footer class="bg-dark text-white text-center py-4">
     <div class="container">
-      &copy; 2022 Jack Veasey
+      &copy; 2026 Jack S Veasey
     </div>
   </footer>
 
